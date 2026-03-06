@@ -116,7 +116,7 @@ export default function Footer() {
     href="mailto:support@.com"
     className="text-muted text-xs hover:text-gold transition-colors"
   >
-    support@wizardtrader7.com
+    support@wizardtrader7git .com
   </a>
 </div>
       </div>
