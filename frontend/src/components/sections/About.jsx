@@ -17,7 +17,7 @@ export default function About() {
         {/* Image */}
         <div ref={imgRef} className="reveal relative rounded-2xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772818740/527499156_18015517445765243_1219765459948936911_n_kq70r0.jpg"
+            src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772895939/IMG_2022.JPG_egkpnb.jpg"
             alt="Harshit Patel"
             className="w-full block brightness-[0.85] saturate-[0.85]"
           />

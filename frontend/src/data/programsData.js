@@ -4,7 +4,7 @@ const programsData = [
     title: 'Live Class March 2026',
     description:
       'Join me live as I break down the exact trades I’m taking in March 2026, including my thought process, risk management, and how I’m positioning myself to be in the top 1% this year.',
-    image: 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772818729/469909572_17987110001765243_3571097215412289916_n_cswn2n.jpg',
+    image: 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772895939/IMG_2022.JPG_egkpnb.jpg',
     comingSoon: false,
     ctaLabel: 'Access Now',
     ctaHref: '#',
@@ -14,7 +14,7 @@ const programsData = [
     title: 'EMA Strategy Masterclass',
     description:
       'A comprehensive masterclass on using EMA strategies for consistent profits.',
-    image: 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772818604/548874957_18020274725765243_2137733411935880668_n_ghg3ss.jpg',
+    image: 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772895941/IMG_0894.JPG_q1ktx1.jpg',
     comingSoon: false,
     ctaLabel: 'Learn More',
     ctaHref: '#',

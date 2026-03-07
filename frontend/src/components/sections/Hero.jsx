@@ -13,17 +13,14 @@ export default function Hero() {
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
         {/* Background image */}
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772800662/wt7_bg_main_hocouu.jpg"
-            alt=""
-            className="absolute h-full max-w-none object-cover brightness-[0.9] saturate-[0.8]"
-            style={{
-              width: "120%",       
-              left: "10%"         
-            }}
-          />
-        </div>
+   <div className="absolute inset-0 overflow-hidden">
+      <img
+        src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772895940/IMG_0896.JPG_ddrcjd.jpg"
+        alt=""
+        className="absolute w-full h-full object-cover brightness-[0.9] saturate-[0.8]"
+        style={{ objectPosition: "center 43%" }}
+      />
+    </div>
         {/* Gradient overlay */}
         <div
           className="absolute inset-0"

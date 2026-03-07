@@ -44,7 +44,7 @@ function ProgramCard({ program, delay }) {
         <img
           src={program.image}
           alt={program.title}
-          className="w-full aspect-[3/4] object-cover object-left block brightness-90"
+          className="w-full aspect-[3/4] object-cover object-center block brightness-90"
         />
         {/* Overlay — only shows if comingSoon */}
         {program.comingSoon && (
