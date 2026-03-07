@@ -9,7 +9,7 @@ export default function TickerTape() {
     const fetchTickers = async () => {
       try {
         // Fetching from your new local Node.js server
-        const response = await fetch('http://localhost:5000/api/tickers');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tickers`);
         
         if (!response.ok) {
           throw new Error('Network response was not ok');
