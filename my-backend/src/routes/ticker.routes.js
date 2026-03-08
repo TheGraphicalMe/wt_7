@@ -6,3 +6,7 @@ const router = express.Router();
 router.get('/', getTickers);
 
 export default router;
+
+
+
+
