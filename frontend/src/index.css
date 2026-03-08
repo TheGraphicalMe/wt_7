@@ -61,3 +61,13 @@
     box-shadow: 0 8px 32px rgba(201, 169, 110, 0.35);
   }
 }
+
+.hero-img {
+  object-position: 60% 20%; /* mobile — shows face */
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    object-position: 70% top; /* desktop */
+  }
+}

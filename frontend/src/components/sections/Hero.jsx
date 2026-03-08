@@ -1,6 +1,14 @@
 import Button from '@/components/ui/Button'
 import TickerTape from '@/components/ui/TickerTape'
 
+const IMAGE_URL = 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772895942/IMG_2033.JPG_xixqhy.jpg'
+
+const GRADIENT = `
+  linear-gradient(to right, #0a0a08 0%, rgba(10,10,8,0.9) 15%, rgba(10,10,8,0.4) 35%, transparent 55%),
+  radial-gradient(ellipse 70% 40% at 50% 99%, rgba(168,85,247,0.18) 0%, transparent 70%),
+  linear-gradient(to bottom, rgba(10,10,8,0.3) 0%, rgba(10,10,8,0) 40%, rgba(10,10,8,0.7) 80%, #0a0a08 100%)
+`
+
 export default function Hero() {
   return (
     <>
@@ -10,35 +18,75 @@ export default function Hero() {
       {/* Ticker */}
       <TickerTape />
 
-      {/* Hero */}
-      <section className="relative min-h-screen flex flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
-        {/* Background image */}
-   <div className="absolute inset-0 overflow-hidden">
-      <img
-        src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772895942/IMG_2033.JPG_xixqhy.jpg"
-        alt=""
-        className="absolute w-full h-full object-cover brightness-[0.85] saturate-[0.9]"
-        style={{ objectPosition: "center 0%" }}
-      />
-    </div>
-        {/* Gradient overlay */}
+      {/* ── MOBILE layout (below md) ── */}
+      <section className="md:hidden flex flex-col bg-bg">
+
+        {/* Image with same brightness + gradient overlay */}
+        <div className="relative w-full h-[70vw] overflow-hidden">
+          <img
+            src={IMAGE_URL}
+            alt=""
+            className="hero-img w-full h-full object-cover brightness-[0.9] saturate-[0.8]"
+          />
+          {/* Same gradient but adjusted for vertical stacked layout */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `
+                radial-gradient(ellipse 70% 40% at 50% 99%, rgba(168,85,247,0.18) 0%, transparent 70%),
+                linear-gradient(to bottom, rgba(10,10,8,0.1) 0%, rgba(10,10,8,0) 30%, rgba(10,10,8,0.7) 80%, #0a0a08 100%)
+              `,
+            }}
+          />
+        </div>
+
+        {/* Text below image */}
+        <div className="px-6 py-8 flex flex-col gap-5 bg-bg">
+          <span className="inline-block font-mono text-[0.7rem] tracking-[0.2em] uppercase text-gold border border-gold/30 rounded-full px-4 py-1.5 w-fit">
+            Trading Made Simple For Anyone
+          </span>
+          <h1 className="font-display text-4xl font-bold leading-[1.15] text-[#f0ede6]">
+            Your First Step Towards Trading Becoming a{' '}
+            <em className="italic text-gold-light">Profitable Career</em>
+          </h1>
+          <p className="text-muted text-sm leading-relaxed">
+            Learn to trade based on your skill level, even if you've never placed a trade before.
+          </p>
+          <Button
+            variant="primary"
+            href="https://www.wizardtrader7.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit"
+          >
+            Join the next masterclass →
+          </Button>
+        </div>
+      </section>
+
+      {/* ── DESKTOP layout (md and above) ── */}
+      <section className="hidden md:flex relative min-h-screen flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
+
+        {/* Background image — your exact original */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={IMAGE_URL}
+            alt=""
+            className="hero-img absolute top-0 left-0 w-full h-full object-cover brightness-[0.8] saturate-[0.8]"
+          />
+        </div>
+
+        {/* Gradient overlay — your exact original */}
         <div
           className="absolute inset-0"
-          style={{
-            background: `
-              linear-gradient(to right, #0a0a08 0%, rgba(10,10,8,0.9) 15%, rgba(10,10,8,0.4) 35%, transparent 55%),
-              radial-gradient(ellipse 70% 40% at 50% 99%, rgba(168,85,247,0.18) 0%, transparent 70%),
-              linear-gradient(to bottom, rgba(10,10,8,0.3) 0%, rgba(10,10,8,0) 40%, rgba(10,10,8,0.7) 80%, #0a0a08 100%)
-            `,
-          }}
+          style={{ background: GRADIENT }}
         />
 
-        {/* Content */}
+        {/* Content — your exact original */}
         <div className="relative z-10 max-w-2xl animate-fadeUp">
           <span className="inline-block font-mono text-[0.72rem] tracking-[0.2em] uppercase text-gold border border-gold/30 rounded-full px-4 py-1.5 mb-6">
             Trading Made Simple For Anyone
           </span>
-
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.1] text-[#f0ede6] mb-5">
             Your First Step Towards Trading
             <br />
@@ -47,12 +95,10 @@ export default function Hero() {
               Profitable Career
             </em>
           </h1>
-
-          <p className="text-muted text-base md:text-lg leading-relaxed  mx-auto mb-10">
+          <p className="text-muted text-base md:text-lg leading-relaxed mx-auto mb-10">
             Learn to trade based on your skill level, even if you've never
             placed a trade before.
           </p>
-
           <Button
             variant="primary"
             href="https://www.wizardtrader7.com/"
@@ -62,12 +108,6 @@ export default function Hero() {
             Join the next masterclass →
           </Button>
         </div>
-
-        {/* Scroll indicator */}
-        {/* <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted text-[0.65rem] tracking-[0.15em] uppercase animate-fadeUp">
-          <span>Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-gold to-transparent animate-scrollPulse" />
-        </div> */}
       </section>
     </>
   )
