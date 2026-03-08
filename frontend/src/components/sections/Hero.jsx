@@ -15,10 +15,10 @@ export default function Hero() {
         {/* Background image */}
    <div className="absolute inset-0 overflow-hidden">
       <img
-        src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772895940/IMG_0896.JPG_ddrcjd.jpg"
+        src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772895942/IMG_2033.JPG_xixqhy.jpg"
         alt=""
-        className="absolute w-full h-full object-cover brightness-[0.9] saturate-[0.8]"
-        style={{ objectPosition: "center 43%" }}
+        className="absolute w-full h-full object-cover brightness-[0.85] saturate-[0.9]"
+        style={{ objectPosition: "center 0%" }}
       />
     </div>
         {/* Gradient overlay */}
