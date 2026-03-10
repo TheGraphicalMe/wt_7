@@ -3,8 +3,11 @@ import Button from '@/components/ui/Button'
 import useScrollReveal from '@/hooks/useScrollReveal'
 import programsData from '@/data/programsData'
 
+
+
+
 export default function Programs() {
-  const headerRef = useScrollReveal()
+  const headerRef = useScrollReveal('reveal-left')
 
   return (
     <section id="programs" className="py-28 px-6">
@@ -28,13 +31,13 @@ export default function Programs() {
   )
 }
 
-function ProgramCard({ program, delay }) {
-  const ref = useScrollReveal()
+function ProgramCard({ program, delay, index }) {
+  const ref = useScrollReveal(index % 2 === 0 ? 'reveal-left' : 'reveal-right')
 
   return (
     <div
       ref={ref}
-      className="reveal rounded-2xl overflow-hidden border border-white/[0.08] bg-card hover:-translate-y-1 hover:border-gold/25 transition-all duration-300"
+      className="reveal rounded-2xl overflow-hidden border border-white/[0.08] bg-[rgba(22,22,20,0.85)] hover:-translate-y-1 hover:border-gold/25 transition-all duration-300"
       style={{ transitionDelay: `${delay}s` }}
     >
 

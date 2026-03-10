@@ -52,7 +52,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-bg border-t border-white/[0.08] pt-16 pb-8 px-6">
+   <footer className="bg-bg/90 backdrop-blur-sm border-t border-white/[0.08] pt-16 pb-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Top grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/[0.08] mb-8">

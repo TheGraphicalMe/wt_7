@@ -2,6 +2,8 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
 import useScrollReveal from '@/hooks/useScrollReveal'
 
+
+
 const RESOURCES = [
   {
     icon: '📈',
@@ -26,14 +28,11 @@ const RESOURCES = [
 ]
 
 export default function Resources() {
-  const textRef = useScrollReveal()
-  const cardsRef = useScrollReveal()
+  const textRef = useScrollReveal('reveal-left')
+  const cardsRef = useScrollReveal('reveal-right')
 
   return (
-    <section
-      id="resources"
-      className="py-28 px-6 bg-surface border-y border-white/[0.08]"
-    >
+    <section id="resources" className="py-28 px-6 section-tint border-y border-white/[0.08]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         {/* Text */}
         <div ref={textRef} className="reveal">
@@ -58,7 +57,7 @@ export default function Resources() {
           {RESOURCES.map((r) => (
             <div
               key={r.title}
-              className="bg-card border border-white/[0.08] rounded-xl px-5 py-4 flex items-center gap-4 hover:border-gold/30 hover:translate-x-1 transition-all duration-200 cursor-pointer"
+              className="bg-[rgba(22,22,20,0.85)] border border-white/[0.08] rounded-xl px-5 py-4 flex items-center gap-4 hover:border-gold/30 hover:translate-x-1 transition-all duration-200 cursor-pointer"
             >
               <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-lg flex-shrink-0">
                 {r.icon}

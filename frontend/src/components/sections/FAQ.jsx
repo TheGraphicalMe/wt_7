@@ -3,15 +3,17 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import useScrollReveal from '@/hooks/useScrollReveal'
 import faqData from '@/data/faqData'
 
+
+
 export default function FAQ() {
   const [openId, setOpenId] = useState(null)
-  const headerRef = useScrollReveal()
-  const listRef = useScrollReveal()
+  const headerRef = useScrollReveal('reveal-up')
+  const listRef = useScrollReveal('reveal-up')
 
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id))
 
   return (
-    <section id="faq" className="py-28 px-6 bg-surface border-t border-white/[0.08]">
+    <section id="faq" className="py-28 px-6 section-tint border-t border-white/[0.08]">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div ref={headerRef} className="reveal text-center mb-14">

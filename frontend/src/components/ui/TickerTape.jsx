@@ -44,7 +44,7 @@ export default function TickerTape() {
   // Show a clean loading state while fetching the first time
   if (loading) {
     return (
-      <div className="bg-card border-y border-white/[0.08] py-2.5 text-center text-muted font-mono text-[0.75rem]">
+      <div className="bg-[rgba(22,22,20,0.85)] border-y border-white/[0.08] py-2.5 text-center text-muted font-mono text-[0.75rem]">
         Loading live market data...
       </div>
     );
@@ -59,7 +59,7 @@ export default function TickerTape() {
   const items = [...tickers, ...tickers];
 
   return (
-    <div className="bg-card border-y border-white/[0.08] overflow-hidden py-2.5">
+    <div className="bg-[rgba(22,22,20,0.85)] border-y border-white/[0.08] overflow-hidden py-2.5">
       {/* Added hover:pause so users can hover to read a specific price */}
       <div className="flex animate-ticker whitespace-nowrap hover:[animation-play-state:paused]">
         {items.map((ticker, i) => (

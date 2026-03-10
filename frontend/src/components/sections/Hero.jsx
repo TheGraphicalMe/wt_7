@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="h-[70px]" />
 
       {/* Ticker */}
-      <TickerTape />
+      {/* <TickerTape /> */}
 
       {/* ── MOBILE layout (below md) ── */}
       <section className="md:hidden flex flex-col bg-bg">

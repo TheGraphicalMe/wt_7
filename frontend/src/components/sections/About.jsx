@@ -1,6 +1,7 @@
 import SectionLabel from '@/components/ui/SectionLabel'
 import useScrollReveal from '@/hooks/useScrollReveal'
 
+
 const STATS = [
   { number: '10K+', label: 'Students Trained' },
   { number: '10Cr+', label: 'Personal P&L Milestone' },
@@ -8,8 +9,8 @@ const STATS = [
 ]
 
 export default function About() {
-  const imgRef = useScrollReveal()
-  const textRef = useScrollReveal()
+  const imgRef = useScrollReveal('reveal-left')
+  const textRef = useScrollReveal('reveal-right')
 
   return (
     <section id="about" className="py-28 px-6">

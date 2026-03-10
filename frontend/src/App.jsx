@@ -6,22 +6,31 @@ import Programs from '@/components/sections/Programs'
 import FAQ from '@/components/sections/FAQ'
 import About from '@/components/sections/About'
 import Blog from '@/components/sections/Blog'
-import Platforms from './components/sections/Platforms'
+import Platforms from '@/components/sections/Platforms'
+import AnimatedBackground from '@/components/ui/AnimatedBackground'
 
 export default function App() {
   return (
     <div className="min-h-screen bg-bg text-[#f0ede6]">
-      <Navbar />
-      <main>
-        <Hero />
-        <Resources />
-        <Programs />
-        <Platforms />
-        <About />
-        <Blog />
-        <FAQ />
-      </main>
-      <Footer />
+
+      {/* Constant animated background — sits behind everything */}
+      <AnimatedBackground />
+
+      {/* All content above the background */}
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <Resources />
+          <Programs />
+          <Platforms />
+          <FAQ />
+          <About />
+          <Blog />
+        </main>
+        <Footer />
+      </div>
+
     </div>
   )
 }

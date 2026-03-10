@@ -3,14 +3,13 @@ import Button from '@/components/ui/Button'
 import useScrollReveal from '@/hooks/useScrollReveal'
 import blogData from '@/data/blogData'
 
+
+
 export default function Blog() {
-  const headerRef = useScrollReveal()
+  const headerRef = useScrollReveal('reveal-left')
 
   return (
-    <section
-      id="blog"
-      className="py-28 px-6 bg-surface border-t border-white/[0.08]"
-    >
+    <section id="blog" className="py-28 px-6 section-tint border-t border-white/[0.08]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div
@@ -39,8 +38,8 @@ export default function Blog() {
   )
 }
 
-function BlogCard({ post, delay }) {
-  const ref = useScrollReveal()
+function BlogCard({ post, delay , index }) {
+  const ref = useScrollReveal(index % 2 === 0 ? 'reveal-left' : 'reveal-right')
 
   // If post has a YouTube URL, open YouTube. Otherwise use internal slug.
   const href = post.youtubeUrl ? post.youtubeUrl : `#blog/${post.slug}`
@@ -52,7 +51,7 @@ function BlogCard({ post, delay }) {
       href={href}
       target={isExternal ? '_blank' : '_self'}       // opens YouTube in new tab
       rel={isExternal ? 'noopener noreferrer' : ''}  // security best practice
-      className="reveal block bg-card border border-white/[0.08] rounded-xl overflow-hidden hover:-translate-y-1 hover:border-gold/20 transition-all duration-300 group"
+      className="reveal block bg-[rgba(22,22,20,0.85)] border border-white/[0.08] rounded-xl overflow-hidden hover:-translate-y-1 hover:border-gold/20 transition-all duration-300 group"
       style={{ transitionDelay: `${delay}s` }}
     >
       {/* YouTube play button overlay */}

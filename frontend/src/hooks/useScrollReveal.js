@@ -2,34 +2,38 @@ import { useEffect, useRef } from 'react'
 
 /**
  * useScrollReveal
- * Attaches an IntersectionObserver to the returned ref.
- * When the element enters the viewport, adds the 'visible' class
- * (defined in index.css alongside the 'reveal' class).
- *
- * @param {object} options - IntersectionObserver options
- * @returns {React.RefObject}
+ * @param {'reveal' | 'reveal-left' | 'reveal-right' | 'reveal-up'} className
+ * @param {boolean} exitOnLeave — animate out when element leaves viewport
  */
-export default function useScrollReveal(options = {}) {
+export default function useScrollReveal(
+  className = 'reveal',
+  exitOnLeave = true,
+) {
   const ref = useRef(null)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
 
+    // Add the base animation class
+    el.classList.add(className)
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          el.classList.remove('exit')
           el.classList.add('visible')
-          observer.unobserve(el)
+        } else if (exitOnLeave && el.classList.contains('visible')) {
+          el.classList.remove('visible')
+          el.classList.add('exit')
         }
       },
-      { threshold: 0.12, ...options },
+      { threshold: 0.12 },
     )
 
     observer.observe(el)
-
     return () => observer.disconnect()
-  }, [])
+  }, [className, exitOnLeave])
 
   return ref
 }

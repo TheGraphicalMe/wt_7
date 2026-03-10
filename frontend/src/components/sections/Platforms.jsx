@@ -42,10 +42,10 @@ const PLATFORMS = [
 ]
 
 export default function Platforms() {
-  const headerRef = useScrollReveal()
+  const headerRef = useScrollReveal('reveal-up')
 
   return (
-    <section id="platforms" className="py-28 px-6 bg-bg">
+    <section id="platforms" className="py-28 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -79,12 +79,12 @@ export default function Platforms() {
 }
 
 function PlatformCard({ platform, delay }) {
-  const ref = useScrollReveal()
+  const ref = useScrollReveal(delay === 0 ? 'reveal-left' : 'reveal-right')
 
   return (
     <div
       ref={ref}
-      className={`reveal group relative bg-card border border-white/[0.08] ${platform.borderHover} rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1`}
+      className={`reveal group relative bg-[rgba(22,22,20,0.85)] border border-white/[0.08] ${platform.borderHover} rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1`}
       style={{ transitionDelay: `${delay}s` }}
     >
       {/* Glow effect on hover */}
