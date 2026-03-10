@@ -49,8 +49,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <Button variant="nav"  target="_blank" rel="noopener noreferrer">
-            Book a call
+          <Button
+            variant="nav"
+            onClick={() => window.location.href = "https://courses.wizardtrader7.com"}
+            className="self-start"
+            >
+            Login
           </Button>
         </div>
 
@@ -91,8 +95,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <Button variant="nav" href="https://cal.com" className="self-start">
-            Book a call
+          <Button
+            variant="nav"
+            onClick={() => window.location.href = "https://courses.wizardtrader7.com"}
+            className="self-start"
+            >
+            Login
           </Button>
         </div>
       )}

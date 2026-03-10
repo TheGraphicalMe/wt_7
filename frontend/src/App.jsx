@@ -6,6 +6,7 @@ import Programs from '@/components/sections/Programs'
 import FAQ from '@/components/sections/FAQ'
 import About from '@/components/sections/About'
 import Blog from '@/components/sections/Blog'
+import Platforms from './components/sections/Platforms'
 
 export default function App() {
   return (
@@ -15,9 +16,10 @@ export default function App() {
         <Hero />
         <Resources />
         <Programs />
-        <FAQ />
+        <Platforms />
         <About />
         <Blog />
+        <FAQ />
       </main>
       <Footer />
     </div>
