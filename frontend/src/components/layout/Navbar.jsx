@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Button
             variant="nav"
-            onClick={() => window.location.href = "https://courses.wizardtrader7.com"}
+            onClick={() => window.location.href = "https://web.wizardtrader7.com/login?orgCode=wzhdwc"}
             className="self-start"
             >
             Login
@@ -98,7 +98,7 @@ export default function Navbar() {
           ))}
           <Button
             variant="nav"
-            onClick={() => window.location.href = "https://courses.wizardtrader7.com"}
+            onClick={() => window.location.href = "https://web.wizardtrader7.com/login?orgCode=wzhdwc"}
             className="self-start"
             >
             Login
