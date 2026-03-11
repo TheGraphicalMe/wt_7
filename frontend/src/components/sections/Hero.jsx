@@ -19,7 +19,7 @@ export default function Hero() {
       {/* <TickerTape /> */}
 
       {/* ── MOBILE layout (below md) ── */}
-      <section className="md:hidden flex flex-col bg-bg">
+      <section className="md:hidden flex flex-col">
 
         {/* Image with same brightness + gradient overlay */}
         <div className="relative w-full h-[70vw] overflow-hidden">
