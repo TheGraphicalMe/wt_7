@@ -214,10 +214,10 @@ function PlatformCard({ platform, delay }) {
 
         {/* Promo Code Box */}
         {platform.code && (
-          <div className="mb-6 bg-white/[0.03] border border-white/[0.08] border-dashed px-3 py-2.5 rounded-xl flex justify-between items-center gap-2">
-            <span className="font-body text-xs text-muted whitespace-nowrap">Use partner code:</span>
-            <div className="flex items-center gap-2 overflow-hidden">
-              <span className="font-display text-sm text-purple-400 tracking-wider truncate">
+          <div className="mb-6 bg-white/[0.03] border border-white/[0.08] border-dashed px-3 py-2.5 rounded-xl flex justify-between items-center gap-2 min-w-0">
+            <span className="font-body text-xs text-muted shrink-0">Use partner code:</span>
+            <div className="flex min-w-0 flex-1 items-center justify-end gap-2 overflow-hidden">
+              <span className="font-display text-sm text-purple-400 tracking-wider truncate max-w-full">
                 {platform.code}
               </span>
               <button 
