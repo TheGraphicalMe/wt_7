@@ -1,34 +1,28 @@
 const programsData = [
   {
     id: 1,
-    title: 'Live Class March 2026',
+    title: 'Crypto and Gold Basic To Advance Batch - APR 2026',
     description:
-      'Join me live as I break down the exact trades I’m taking in March 2026, including my thought process, risk management, and how I’m positioning myself to be in the top 1% this year.',
-    image: 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772895939/IMG_2022.JPG_egkpnb.jpg',
+      'If you want to truly understand Crypto and Gold trading, this intensive 1-month live training program is designed to take you from absolute basics to advanced trading concepts.',
+    image: '/public/assets/media/basictoadvance.jpeg',
+    totalInvestment: 'Rs 28,000',
+    couponCode: 'STUDENT7',
+    couponValue: 'Rs 13,000 OFF',
     comingSoon: false,
-    ctaLabel: 'Access Now',
-    ctaHref: '#',
+    ctaLabel: 'Become Student',
+    ctaHref: 'https://wzhdwc.courses.store/812783?true&coupon=STUDENT7',
   },
   {
     id: 2,
-    title: 'EMA Strategy Masterclass',
+    title: 'PSYCHOLOGY by WIZARD TRADER : BRAIN YOGA',
     description:
-      'A comprehensive masterclass on using EMA strategies for consistent profits.',
-    image: 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772895941/IMG_0894.JPG_q1ktx1.jpg',
+      'BRAIN YOGA by Wizard Trader is a unique psychology-focused program designed to help traders develop discipline, emotional control, and a powerful trading mindset.',
+    image: '/public/assets/media/psychology.webp',
+    imageFit: 'contain',
+    totalInvestment: 'Rs 1,999',
     comingSoon: false,
-    ctaLabel: 'Learn More',
-    ctaHref: '#',
-  },
-  {
-    id: 3,
-    title: 'Advanced Strategy',
-    description:
-      'Deep-dive into multi-timeframe confluence, risk-to-reward mastery, and institutional order flow reading.',
-    image: 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772818727/469736754_17987296478765243_7376140797569335896_n_mrkbci.jpg',
-    comingSoon: true,
-    ctaLabel: 'Learn More',
-    ctaHref: '#',
-    emoji: '🔒',
+    ctaLabel: 'Become Student',
+    ctaHref: 'https://wzhdwc.courses.store/813688',
   },
 ]
 

@@ -11,11 +11,11 @@ const blogData = [
   {
     id: 2,
     tag: 'The only video you need to see as a beginner 🔥',
-    date: '28 Feb 2026',
-    title: 'What actually moves the market',
-    image: 'https://img.youtube.com/vi/Gmm0by8LshA/maxresdefault.jpg',
+    date: '26 Mar 2026',
+    title: 'We dive deep into Risk Management',
+    image: 'https://img.youtube.com/vi/JzJpTCdkNN0/maxresdefault.jpg',
     slug: 'What actually moves the market',
-    youtubeUrl: 'https://www.youtube.com/watch?v=Gmm0by8LshA',
+    youtubeUrl: 'https://www.youtube.com/watch?v=JzJpTCdkNN0',
   },
   {
     id: 3,

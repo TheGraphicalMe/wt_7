@@ -16,7 +16,8 @@ export default function AnimatedBackground() {
     }
     resize()
     window.addEventListener('resize', resize)
-    window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY })
+    const handleMouseMove = e => { mouse.x = e.clientX; mouse.y = e.clientY }
+    window.addEventListener('mousemove', handleMouseMove)
 
     const W = () => canvas.width
     const H = () => canvas.height
@@ -316,13 +317,14 @@ export default function AnimatedBackground() {
 
     const waves = []
     let lastWaveTime = 0
-    window.addEventListener('mousemove', () => {
+    const handleWaveMove = () => {
       if (time - lastWaveTime > 0.3) {
         waves.push(new EnergyWave(mouse.x, mouse.y))
         if (waves.length > 8) waves.shift()
         lastWaveTime = time
       }
-    })
+    }
+    window.addEventListener('mousemove', handleWaveMove)
 
     // ─────────────────────────────────────────
     // 6. HOLOGRAPHIC SCAN LINE
@@ -450,6 +452,8 @@ export default function AnimatedBackground() {
     return () => {
       cancelAnimationFrame(animId)
       window.removeEventListener('resize', resize)
+      window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('mousemove', handleWaveMove)
     }
   }, [])
 

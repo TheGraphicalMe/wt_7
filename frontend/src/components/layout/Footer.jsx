@@ -10,8 +10,8 @@ const FOOTER_LINKS = {
     { label: 'Contact', href: '#' },
   ],
   Legal: [
-    { label: 'Terms & Conditions' },
-    { label: 'Risk Disclaimer' },
+    { label: 'Terms & Conditions', href: '#' },
+    { label: 'Risk Disclaimer', href: '#' },
   ],
 }
 
@@ -92,7 +92,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
   <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-  <p className="text-muted text-xs">© 2025 Wizard Trader 7, LLC. All rights reserved.</p>
+  <p className="text-muted text-xs">© {new Date().getFullYear()} Wizard Trader 7, LLC. All rights reserved.</p>
 
   {/* Socials */}
   <div className="flex items-center gap-3">
@@ -111,7 +111,7 @@ export default function Footer() {
   </div>
 
   <a
-    href="mailto:support@.com"
+    href="mailto:support@wizardtrader7.com"
     className="text-muted text-xs hover:text-gold transition-colors"
   >
     support@wizardtrader7.com

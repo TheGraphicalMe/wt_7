@@ -1,7 +1,8 @@
 import Button from '@/components/ui/Button'
 import TickerTape from '@/components/ui/TickerTape'
 
-const IMAGE_URL = 'https://res.cloudinary.com/dtbwolk88/image/upload/v1772895942/IMG_2033.JPG_xixqhy.jpg'
+const IMAGE_URL_MOBILE  = 'https://res.cloudinary.com/dtbwolk88/image/upload/f_auto,q_auto,w_800/v1772895942/IMG_2033.JPG_xixqhy.jpg'
+const IMAGE_URL_DESKTOP = 'https://res.cloudinary.com/dtbwolk88/image/upload/f_auto,q_auto,w_1400/v1772895942/IMG_2033.JPG_xixqhy.jpg'
 
 const GRADIENT = `
   linear-gradient(to right, #0a0a08 0%, rgba(10,10,8,0.9) 15%, rgba(10,10,8,0.4) 35%, transparent 55%),
@@ -24,8 +25,9 @@ export default function Hero() {
         {/* Image with same brightness + gradient overlay */}
         <div className="relative w-full h-[70vw] overflow-hidden">
           <img
-            src={IMAGE_URL}
-            alt=""
+            src={IMAGE_URL_MOBILE}
+            alt="Wizard Trader 7 — Trading Made Simple"
+            fetchPriority="high"
             className="hero-img w-full h-full object-cover brightness-[0.9] saturate-[0.8]"
           />
           {/* Same gradient but adjusted for vertical stacked layout */}
@@ -59,7 +61,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="w-fit"
           >
-            Join the next masterclass →
+            Become Student →
           </Button>
         </div>
       </section>
@@ -70,8 +72,9 @@ export default function Hero() {
         {/* Background image — your exact original */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src={IMAGE_URL}
-            alt=""
+            src={IMAGE_URL_DESKTOP}
+            alt="Wizard Trader 7 — Trading Made Simple"
+            fetchPriority="high"
             className="hero-img absolute top-0 left-0 w-full h-full object-cover brightness-[0.8] saturate-[0.8]"
           />
         </div>
@@ -105,7 +108,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Join the next masterclass →
+            Become Student →
           </Button>
         </div>
       </section>

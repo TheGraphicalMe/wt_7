@@ -30,7 +30,7 @@ export default function Blog() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogData.map((post, i) => (
-            <BlogCard key={post.id} post={post} delay={i * 0.08} />
+            <BlogCard key={post.id} post={post} delay={i * 0.08} index={i} />
           ))}
         </div>
       </div>

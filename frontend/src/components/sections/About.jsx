@@ -18,8 +18,9 @@ export default function About() {
         {/* Image */}
         <div ref={imgRef} className="reveal relative rounded-2xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/dtbwolk88/image/upload/v1772895940/IMG_0896.JPG_ddrcjd.jpg"
+            src="https://res.cloudinary.com/dtbwolk88/image/upload/f_auto,q_auto,w_800/v1772895940/IMG_0896.JPG_ddrcjd.jpg"
             alt="Harshit Patel"
+            loading="lazy"
             className="w-full block brightness-[0.85] saturate-[0.85]"
           />
           {/* Gradient fade at bottom */}
