@@ -132,9 +132,15 @@ function ProgramCard({ program, delay, index }) {
 
           {/* CTA Button */}
           {program.comingSoon ? (
-            <Button variant="ghost" className="w-full justify-center">{program.ctaLabel}</Button>
+            <Button variant="ghost" className="w-full text-center text-base py-3.5 px-7 rounded-lg">
+              {program.ctaLabel}
+            </Button>
           ) : (
-            <Button variant="outline" href={program.ctaHref} className="w-full justify-center">
+            <Button
+              variant="outline"
+              href={program.ctaHref}
+              className="w-full text-center text-base py-3.5 px-7 rounded-lg"
+            >
               {program.ctaLabel}
             </Button>
           )}
