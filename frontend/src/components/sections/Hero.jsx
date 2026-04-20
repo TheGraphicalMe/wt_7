@@ -13,26 +13,26 @@ const GRADIENT = `
 export default function Hero() {
   return (
     <>
+      {/* Spacer for fixed nav */}
+      <div className="h-[70px] md:hidden" />
+
       {/* Ticker */}
       {/* <TickerTape /> */}
 
-      {/* Spacer for fixed nav */}
-      <div className="h-[70px] shrink-0 w-full" />
+      {/* ── MOBILE layout (below md) ── */}
+      <section className="md:hidden flex flex-col h-[calc(100vh-70px)]">
 
-      {/* ── MOBILE layout (below md / 768px) ── */}
-      <section className="md:hidden flex flex-col h-[calc(100dvh-70px)] overflow-hidden">
-
-        {/* Image — object-cover fills container, object-position keeps face visible */}
-        <div className="relative w-full flex-1 min-h-0 overflow-hidden">
+        {/* Image container takes remaining space */}
+        <div className="relative w-full flex-1 min-h-0 bg-bg overflow-hidden flex items-end justify-center">
           <img
             src={IMAGE_URL_MOBILE}
             alt="Wizard Trader 7 — Trading Made Simple"
             fetchPriority="high"
-            className="hero-img w-full h-full object-cover brightness-[0.9] saturate-[0.8]"
+            className="hero-img absolute inset-0 w-full h-full object-cover object-right-bottom brightness-[0.9] saturate-[0.8]"
           />
           {/* Gradient overlay */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 pointer-events-none"
             style={{
               background: `
                 radial-gradient(ellipse 70% 40% at 50% 99%, rgba(168,85,247,0.18) 0%, transparent 70%),
@@ -42,16 +42,16 @@ export default function Hero() {
           />
         </div>
 
-        {/* Text below image */}
-        <div className="px-6 py-4 flex flex-col gap-5 bg-bg flex-1 justify-center">
+        {/* Text area takes its natural height */}
+        <div className="px-6 py-6 flex flex-col gap-5 bg-bg shrink-0 z-10 relative">
           <span className="inline-block font-mono text-[0.7rem] tracking-[0.2em] uppercase text-gold border border-gold/30 rounded-full px-4 py-1.5 w-fit">
             Trading Made Simple For Anyone
           </span>
-          <h1 className="font-display text-4xl font-bold leading-[1.3] text-[#f0ede6]">
+          <h1 className="font-display text-4xl font-bold leading-[1.15] text-[#f0ede6]">
             Your First Step Towards Trading Becoming a{' '}
             <em className="italic text-gold-light">Profitable Career</em>
           </h1>
-          <p className="text-muted text-base leading-[1.8]">
+          <p className="text-muted text-sm leading-relaxed">
             Learn to trade based on your skill level, even if you've never placed a trade before.
           </p>
           <Button
@@ -66,10 +66,10 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ── DESKTOP + TABLET layout (md and above / 768px+) ── */}
-      <section className="hidden md:flex relative h-[calc(100dvh-70px)] flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
+      {/* ── DESKTOP layout (md and above) ── */}
+      <section className="hidden md:flex relative h-screen min-h-[600px] flex-col items-start justify-center pt-[70px] px-6 md:px-20 overflow-hidden">
 
-        {/* Background image */}
+        {/* Background image — your exact original */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={IMAGE_URL_DESKTOP}
@@ -79,13 +79,13 @@ export default function Hero() {
           />
         </div>
 
-        {/* Gradient overlay */}
+        {/* Gradient overlay — your exact original */}
         <div
           className="absolute inset-0"
           style={{ background: GRADIENT }}
         />
 
-        {/* Content */}
+        {/* Content — your exact original */}
         <div className="relative z-10 max-w-2xl animate-fadeUp">
           <span className="inline-block font-mono text-[0.72rem] tracking-[0.2em] uppercase text-gold border border-gold/30 rounded-full px-4 py-1.5 mb-6">
             Trading Made Simple For Anyone
