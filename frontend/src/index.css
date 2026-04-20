@@ -109,8 +109,12 @@ section {
   background: rgba(10,10,8,0.8) !important;
 }
 
+.hero-img {
+  object-position: 65% 20%;  /* mobile: keep face visible */
+}
+
 @media (min-width: 768px) {
   .hero-img {
-    object-position: 70% 10%;  /* increase second value to move image down */
+    object-position: 70% 10%;  /* desktop: shift up slightly */
   }
 }

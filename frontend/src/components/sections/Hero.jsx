@@ -13,22 +13,19 @@ const GRADIENT = `
 export default function Hero() {
   return (
     <>
-      {/* Spacer for fixed nav */}
-      <div className="h-[70px]" />
-
       {/* Ticker */}
       {/* <TickerTape /> */}
 
       {/* ── MOBILE layout (below md) ── */}
-      <section className="md:hidden flex flex-col">
+      <section className="md:hidden flex flex-col h-[100dvh] pt-[70px] overflow-hidden">
 
         {/* Image with same brightness + gradient overlay */}
-        <div className="relative w-full h-[70vw] overflow-hidden">
+        <div className="relative w-full flex-1 min-h-0 overflow-hidden">
           <img
             src={IMAGE_URL_MOBILE}
             alt="Wizard Trader 7 — Trading Made Simple"
             fetchPriority="high"
-            className="hero-img w-full h-full object-cover brightness-[0.9] saturate-[0.8]"
+            className="hero-img w-full h-full object-contain brightness-[0.9] saturate-[0.8]"
           />
           {/* Same gradient but adjusted for vertical stacked layout */}
           <div
@@ -43,15 +40,15 @@ export default function Hero() {
         </div>
 
         {/* Text below image */}
-        <div className="px-6 py-8 flex flex-col gap-5 bg-bg">
+        <div className="px-6 py-4 flex flex-col gap-5 bg-bg flex-1 justify-center">
           <span className="inline-block font-mono text-[0.7rem] tracking-[0.2em] uppercase text-gold border border-gold/30 rounded-full px-4 py-1.5 w-fit">
             Trading Made Simple For Anyone
           </span>
-          <h1 className="font-display text-4xl font-bold leading-[1.15] text-[#f0ede6]">
+          <h1 className="font-display text-4xl font-bold leading-[1.3] text-[#f0ede6]">
             Your First Step Towards Trading Becoming a{' '}
             <em className="italic text-gold-light">Profitable Career</em>
           </h1>
-          <p className="text-muted text-sm leading-relaxed">
+          <p className="text-muted text-base leading-[1.8]">
             Learn to trade based on your skill level, even if you've never placed a trade before.
           </p>
           <Button
@@ -67,9 +64,9 @@ export default function Hero() {
       </section>
 
       {/* ── DESKTOP layout (md and above) ── */}
-      <section className="hidden md:flex relative min-h-screen flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
+      <section className="hidden md:flex relative h-[100dvh] pt-[70px] flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
 
-        {/* Background image — your exact original */}
+        {/* Background image */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={IMAGE_URL_DESKTOP}
@@ -79,13 +76,13 @@ export default function Hero() {
           />
         </div>
 
-        {/* Gradient overlay — your exact original */}
+        {/* Gradient overlay */}
         <div
           className="absolute inset-0"
           style={{ background: GRADIENT }}
         />
 
-        {/* Content — your exact original */}
+        {/* Content */}
         <div className="relative z-10 max-w-2xl animate-fadeUp">
           <span className="inline-block font-mono text-[0.72rem] tracking-[0.2em] uppercase text-gold border border-gold/30 rounded-full px-4 py-1.5 mb-6">
             Trading Made Simple For Anyone

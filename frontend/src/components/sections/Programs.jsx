@@ -44,7 +44,7 @@ function ProgramCard({ program, delay, index }) {
           <img
             src={program.image}
             alt={program.title}
-            className={`w-full aspect-[3/4] object-center block brightness-90 ${
+            className={`w-full aspect-[893/1600] object-center block brightness-90 ${
               program.imageFit === 'contain' ? 'object-contain bg-black' : 'object-cover'
             }`}
           />
@@ -60,7 +60,7 @@ function ProgramCard({ program, delay, index }) {
         </div>
       ) : (
         // Fallback dark placeholder (for cards with no image at all)
-        <div className="w-full aspect-[3/4] bg-gradient-to-br from-[#1a1a16] to-[#111110] flex flex-col items-center justify-center gap-3">
+        <div className="w-full aspect-[893/1600] bg-gradient-to-br from-[#1a1a16] to-[#111110] flex flex-col items-center justify-center gap-3">
           <span className="text-4xl">{program.emoji}</span>
           <span className="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted border border-white/[0.08] rounded-full px-3 py-1">
             Coming Soon
