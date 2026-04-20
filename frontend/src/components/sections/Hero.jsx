@@ -16,18 +16,21 @@ export default function Hero() {
       {/* Ticker */}
       {/* <TickerTape /> */}
 
-      {/* ── MOBILE layout (below md) ── */}
-      <section className="md:hidden flex flex-col h-[100dvh] pt-[70px] overflow-hidden">
+      {/* Spacer for fixed nav */}
+      <div className="h-[70px] shrink-0 w-full" />
 
-        {/* Image with same brightness + gradient overlay */}
+      {/* ── MOBILE layout (below md / 768px) ── */}
+      <section className="md:hidden flex flex-col h-[calc(100dvh-70px)] overflow-hidden">
+
+        {/* Image — object-cover fills container, object-position keeps face visible */}
         <div className="relative w-full flex-1 min-h-0 overflow-hidden">
           <img
             src={IMAGE_URL_MOBILE}
             alt="Wizard Trader 7 — Trading Made Simple"
             fetchPriority="high"
-            className="hero-img w-full h-full object-contain brightness-[0.9] saturate-[0.8]"
+            className="hero-img w-full h-full object-cover brightness-[0.9] saturate-[0.8]"
           />
-          {/* Same gradient but adjusted for vertical stacked layout */}
+          {/* Gradient overlay */}
           <div
             className="absolute inset-0"
             style={{
@@ -63,8 +66,8 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ── DESKTOP layout (md and above) ── */}
-      <section className="hidden md:flex relative h-[100dvh] pt-[70px] flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
+      {/* ── DESKTOP + TABLET layout (md and above / 768px+) ── */}
+      <section className="hidden md:flex relative h-[calc(100dvh-70px)] flex-col items-start justify-center px-6 md:px-20 overflow-hidden">
 
         {/* Background image */}
         <div className="absolute inset-0 overflow-hidden">

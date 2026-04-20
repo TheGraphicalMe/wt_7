@@ -110,7 +110,7 @@ section {
 }
 
 .hero-img {
-  object-position: 65% 20%;  /* mobile: keep face visible */
+  object-position: 85% 50%;  /* mobile: shift to right to keep face visible */
 }
 
 @media (min-width: 768px) {
